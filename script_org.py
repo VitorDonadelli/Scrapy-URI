@@ -40,7 +40,7 @@ def print_categoria(categoria):
        elif(categoria == 9):
             print("SQL")
 
-def ordenacao_dificuldade(lista_completa):
+def ordenacao_dificuldade(lista_completa,quantos):
     
     dificuldades = []
     exercicios = []
@@ -52,7 +52,8 @@ def ordenacao_dificuldade(lista_completa):
     
     for i in range(0,len(exercicios)):
         for j in range(0,len(exercicios)-1):
-            if(dificuldades[j] > dificuldades[j+1]):
+            if(int(dificuldades[j]) > int(dificuldades[j+1])):
+               
                 aux = dificuldades[j]
                 dificuldades[j] = dificuldades[j+1]
                 dificuldades[j+1] = aux
@@ -64,11 +65,23 @@ def ordenacao_dificuldade(lista_completa):
     x = 1
     for i in range(0,len(exercicios)):
         if(int(dificuldades[i]) == int(x)):
+            
             print("\n" + "----------" + "Dificuldade " + str(x) + "----------")
             x = x + 1
+            
         print(exercicios[i])
+    
+    print("")
+    
+    if(quantos != 0):
+        for i in range(0,len(exercicios)):
+            x=0
+            while(x < quantos):
+                print(exercicios[i],end=" ")
+                x = x + 1
+            print("")
 
-def ordenacao_exercicio(dificuldade,lista_completa):
+def ordenacao_exercicio(dificuldade,lista_completa,quantos):
     
     dificuldades = []
     exercicios = []
@@ -84,7 +97,10 @@ def ordenacao_exercicio(dificuldade,lista_completa):
     elif(dificuldade == 2):
         for i in range(0,len(exercicios)):
             print(exercicios[i])
+
     
+
+
 
 # Filtragem
 
@@ -94,10 +110,14 @@ lista_completa = manipulacao_arquivo(categoria)
 
 
 organizacao = int(input("[1] - Ordem crescente (numero)\n[2] - Ordem crescente (dificuldade/nível)\n\n"))
+quantos = int(input("Quer separar em quantos ex? (0 para apenas listar)"))
 if(organizacao == 1):
     dificuldade = int(input("Imprimir com dificuldade?\n[1] - Sim\n[2] - Nao\n\n"))
     print_categoria(categoria)
     ordenacao_exercicio(dificuldade,lista_completa)
 if(organizacao == 2):
     print_categoria(categoria)
-    ordenacao_dificuldade(lista_completa)
+    ordenacao_dificuldade(lista_completa,quantos)
+
+
+
