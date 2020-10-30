@@ -116,7 +116,7 @@ Categorias
 # [8] - Geometria Computacional
 # [9] - SQL
 '''
-categoria = 1
+categoria = 3
 
 
 '''
