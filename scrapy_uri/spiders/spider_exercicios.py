@@ -1,7 +1,7 @@
 import scrapy
 
 class WebScrapy(scrapy.Spider):
-    name = 'exercicios_uri' #Usado em: $ scrapy crawl name -o saida.json
+    name = 'exercicios' #Usado em: $ scrapy crawl name -o saida.json
     i = int(input(
             "Qual categoria quer fazer o crawl?\n[1] - Iniciante\n[2] - AD-HOC\n[3] - Strings\n[4] - Estruturas e Bibliotecas\n[5] - Matemática\n[6] - Paradigmas\n[7] - Grafos\n[8] - Geometria Computacional\n[9] - SQL\n"))
 

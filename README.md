@@ -27,6 +27,11 @@ Fazer filtros: *Done*
 
 # Como utilizar:
 
+Instalação do scrapy: [Scrapy Download](https://scrapy.org/download/)
+
+        pip install scrapy
+
+
 Para utilizar o crawl em apenas uma categoria:
 
         cd scrapy_uri/spiders
