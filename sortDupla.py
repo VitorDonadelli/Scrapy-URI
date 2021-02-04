@@ -1,8 +1,11 @@
 
 import random
 
-alunosS = ["Iara", "Thais"]
-alunos = ["Carlos", "Donderi", "Carioca", "Cabelin", "Allan", "Amanda M", "Amanda L", "Guilherme", "Paulo", "Roberto", "Yuri"]
+# Out:   "Amanda L", "Amanda M", "Yuri"
+
+alunosS = ["Iara", "Lorenzo"]
+alunos = ["Julia", "Nathan", "Thais", "Carlos", "Donderi", "Cabelin", "Allan", "Carioca", "Guilherme", "Roberto", "Paulo"]
+
 random.shuffle(alunos)
 
 if len(alunos) % 2 == 1:
